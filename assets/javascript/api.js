@@ -55,6 +55,7 @@ function startMap() {
 
 
 // Uber api call
+//CALL: when submit button is clicked
 function getUberApi(startLat, startLong, endLat, endLong) {
     queryURL = 'https://cors-anywhere.herokuapp.com/api.uber.com/v1.2/estimates/price?';
     accessKey = '&server_token=ItD3_RRwUZCvBw5a4gEmtVwnD9GuOzn2Q2stHyee';
@@ -67,7 +68,7 @@ function getUberApi(startLat, startLong, endLat, endLong) {
 
     $.ajax({ url: queryURL, method: "GET" })
         .then(function (response) {
-
+            //ADD functionality to results page
             console.log(response);
         });
 }
