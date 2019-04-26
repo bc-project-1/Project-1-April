@@ -9,25 +9,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <style>
+        /* adjusts google map to cointaining box */
+        #map-canvas {
+            height: 500px;
+            width: 500px;
+            margin: 0px;
+            padding: 0px;
+            /* NEED TO DO: align to center */
+        }
+
         /* Remove the navbar's default rounded borders and increase the bottom margin */
-        
+
         .navbar {
             margin-bottom: 50px;
             border-radius: 0;
         }
+
         /* Remove the jumbotron's default bottom margin */
-        
+
         .jumbotron {
             margin-bottom: 0;
         }
-        
+
         .panel-success>.panel-heading {
             color: #fff;
             background-color: #3c763d;
             border-color: #d6e9c6;
         }
+
         /* Add a gray background color and some padding to the footer */
-        
+
         footer {
             background-image: url(assets/images/NUBanner1.png);
             background-repeat: no-repeat;
@@ -50,10 +61,10 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#">Logo</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -105,11 +116,14 @@
                     <div class="row justify-content-md-center">
                         <div class="panel panel-primary">
                             <div class="panel-heading">CHOOSE A ROUTE </div>
-                            <div class="panel-body"><img src="http://www.clker.com/cliparts/Q/l/6/R/6/R/world-map-in-colors-no-strip-md.png" class="img-responsive" style="width:100%" alt="Image">
+                            <div class="panel-body">
+                                <div id="map-canvas"></div>
                             </div>
+
                             <div class="panel-footer"><button type="button" class="btn btn-primary"> 
                                 <a href="Results.html" style="color:#fff;" >Submit</a>
                          </button>
+
                             </div>
                         </div>
                     </div>
@@ -122,13 +136,22 @@
                     </div>-->
                 </div>
             </div><br><br>
-            <footer class="container-fluid text-center">
-                <!-- <p>Just an Idea for later in the project process</p>
-        <form class="form-inline">Get deals:
-            <input type="email" class="form-control" size="50" placeholder="Email Address">
-            <button type="button" class="btn btn-danger">Sign Up</button>
-        </form> -->
-            </footer>
+            
+
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+            <!-- <p>Just an Idea for later in the project process</p>
+    <form class="form-inline">Get deals:
+        <input type="email" class="form-control" size="50" placeholder="Email Address">
+        <button type="button" class="btn btn-danger">Sign Up</button>
+    </form> -->
+        </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry,places&ext=.js"></script>
+
+
+    <script type="text/javascript" src="assets/javascript/api.js"></script>
 </body>
 
 </html>
