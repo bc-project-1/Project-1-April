@@ -71,7 +71,10 @@ function getUberApi(startLat, startLong, endLat, endLong) {
     $.ajax({ url: queryURL, method: "GET" })
         .then(function (response) {
             //ADD functionality to results page
-            console.log(response);
+                //UBER DOM FUNCTION CALL
+                console.log(response);
+                writeUber(response);
+            
         });
 }
 
