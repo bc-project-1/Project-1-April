@@ -120,9 +120,10 @@
                                 <div id="map-canvas"></div>
                             </div>
 
-                            <div class="panel-footer"><button type="button" class="btn btn-primary"> 
-                                <a href="Results.html" style="color:#fff;" >Submit</a>
-                         </button>
+                            <div class="panel-footer"><button type="button" class="btn btn-primary"
+                                    id="submit-destination">
+                                    <a href="Results.html" style="color:#fff;" >Submit</a>
+                                </button>
 
                             </div>
                         </div>
@@ -136,22 +137,28 @@
                     </div>-->
                 </div>
             </div><br><br>
-            
+
 
         </div>
     </div>
     <footer class="container-fluid text-center">
-            <!-- <p>Just an Idea for later in the project process</p>
+        <!-- <p>Just an Idea for later in the project process</p>
     <form class="form-inline">Get deals:
         <input type="email" class="form-control" size="50" placeholder="Email Address">
         <button type="button" class="btn btn-danger">Sign Up</button>
     </form> -->
-        </footer>
+    </footer>
 
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry,places&ext=.js"></script>
 
-
+ 
     <script type="text/javascript" src="assets/javascript/api.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <script>
+        //gets local location through IP address
+        ipLookUp();
+    </script>
 </body>
 
 </html>
