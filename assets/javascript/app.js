@@ -1,19 +1,9 @@
+//Uber Dom manipulation function
+function writeUber(response){
+    $('.uber-time').val(response.prices[4].duration / 60 + ' minutes');
+    $('.uber-cost').val(response.prices[4].high_estimate + ' dollars');
+}
 
-
-$("#submit-destination").on("click", function (event) {
-    event.preventDefault();
-    //debugger;
-    window.location = 'Results.html';
-    console.log(sessionStorage.getItem("sLat"))
-    console.log(sessionStorage.getItem("sLong"))
-    console.log(sessionStorage.getItem("eLat"))
-    console.log(sessionStorage.getItem("eLong"))
-
-    sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"),
-
-    getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
-
-});
 
 
 // function weatherToDom(city, temp, currWeather){
@@ -23,3 +13,4 @@ $("#submit-destination").on("click", function (event) {
 //     $("#temp").append(temp)
 //     $("#condtions").append(currWeather)
 // }
+
