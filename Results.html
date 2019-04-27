@@ -92,9 +92,9 @@
             <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
             <div class="form-group">
               <label for="inputdefault">Arrival Time</label>
-              <input class="form-control" id="inputdefault" type="text">
+              <input class="form-control uber-time" id="inputdefault" type="text">
               <label for="inputdefault">$Cost</label>
-              <input class="form-control" id="inputdefault" type="text">
+              <input class="form-control uber-cost" id="inputdefault" type="text">
             </div>
           </div>
           <div class="panel-footer"><button type="button" class="btn btn-primary">Book</button></div>
@@ -162,6 +162,7 @@
   <script>
     //get Uber info on page load
     getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
+    
   </script>
 </body>
 
