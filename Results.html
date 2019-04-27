@@ -44,6 +44,7 @@
         display: none; 
       }
     }
+
   </style>
 </head>
 
@@ -144,13 +145,24 @@
 </div><br><br>-->
 
   <footer class="container-fluid text-center img-fluid">
+
     <!-- <p>Just an Idea for later in the project process</p>
         <form class="form-inline">Get deals:
             <input type="email" class="form-control" size="50" placeholder="Email Address">
             <button type="button" class="btn btn-danger">Sign Up</button>
-        </form>  -->
+
+        </form> -->
   </footer>
 
+
+  <script type="text/javascript" src="assets/javascript/api.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+
+  <script>
+    //get Uber info on page load
+    getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
+  </script>
 </body>
 
 </html>
