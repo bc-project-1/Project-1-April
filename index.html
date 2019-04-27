@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Results</title>
+    <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -47,6 +47,12 @@
             background-color: #f2f2f2;
             padding: 48px;
         }
+
+        @media only screen and (max-width: 768px) {
+            footer {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -82,71 +88,33 @@
             </div>
         </div>
     </nav>
-
-    <div class="row">
-        <div class="logo">
-            <div class="image-container">
-
-                <ul class="main-nav">
-
-                    <li class="active"><a href=""> HOME </a></li>
-                    <li class="active"><a href=""> MY ACCOUNT </a></li>
-                    <li class="active"><a href=""> MY LOCATIONS </a></li>
-                    <li class="active"><a href=""> SETTINGS </a></li>
-
-
-                    </li>
-                </ul>
-                <form>
-                    Where would you like to go today?<br>
-                    <input type="text" name="Towhere">
-                </form>
-                <button>"FIND ME"</button>
-                <link rel="icon" href="http://example.com/favicon.png">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <!-- <div class="col-md-4 offset-md-4">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">HOME</div>
-                            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <div class="panel-footer"><button type="button" class="btn btn-primary">Primary</button></div>
-                        </div>
-                    </div>-->
-                    <div class="row justify-content-md-center">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">CHOOSE A ROUTE </div>
-                            <div class="panel-body">
-                                <div id="map-canvas"></div>
-                            </div>
-
-                            <div class="panel-footer"><button type="button" class="btn btn-primary"> 
-                                <a href="Results.html" style="color:#fff;" >Submit</a>
-                         </button>
-
-                            </div>
-                        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Uber</div>
+                    <div class="panel-body" id="#">
+                        <div id="map-canvas"></div>
+                        <form class="form-inline">
+                            Where would you like to go today?<br>
+                            <input type="text" name="Towhere">
+                            <button type="button" class="btn btn-primary">
+                                <a href="Results.html" style="color:#fff;">Submit</a>
+                            </button>
+                        </form>
                     </div>
-                    <!-- <div class="col-sm-4">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <div class="panel-footer"><button type="button" class="btn btn-primary">Primary</button></div>
-                        </div>
-                    </div>-->
+                    <!-- <div class="panel-footer"><button type="button" class="btn btn-primary">Book</button></div> -->
                 </div>
-            </div><br><br>
-            
-
+            </div>
         </div>
     </div>
     <footer class="container-fluid text-center">
-            <!-- <p>Just an Idea for later in the project process</p>
+        <!-- <p>Just an Idea for later in the project process</p>
     <form class="form-inline">Get deals:
         <input type="email" class="form-control" size="50" placeholder="Email Address">
         <button type="button" class="btn btn-danger">Sign Up</button>
     </form> -->
-        </footer>
+    </footer>
 
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry,places&ext=.js"></script>
 
