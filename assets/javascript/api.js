@@ -81,9 +81,10 @@ function getUberApi(startLat, startLong, endLat, endLong) {
 
 // ================== Weather api call ================================================================
 
-var lat= "41.945497599999996";
-var lon= "-87.6486656";
 function getWeather() {
+
+var lat= sessionStorage.getItem("eLat");
+var lon= sessionStorage.getItem("eLong");
 queryURL = 'http://api.openweathermap.org/data/2.5/weather?';
 weatherLat = 'lat=' + lat;
 weatherLon = '&lon=' + lon;
@@ -93,12 +94,15 @@ queryURL += weatherLat + weatherLon + units + accessKey;
 
 $.ajax({ url: queryURL, method: "GET" })
     .then(function (response) {
-        console.log(response);   
-        console.log(response.main.temp);
         var temp =  response.main.temp
         var currWeather = response.weather[0].description
+        var city = response.name
         console.log("Dest. Temperature: " + temp)
-        console.log("Dest. Weather: " + currWeather)  
-
+        console.log("Dest. Weather: " + currWeather)
+        console.log(response.name)
+        $("#city").append(" "+city)
+        $("#temp").append(" "+temp)
+        $("#currWeather").append(" "+currWeather)
+        // weatherToDom()
     });
 }

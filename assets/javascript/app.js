@@ -4,6 +4,7 @@ function writeUber(response){
     $('.uber-cost').val(response.prices[4].high_estimate + ' dollars');
 }
 
+
 function addFav(){
    var fav = {
        label: $('#fav-label').val(),
@@ -22,4 +23,15 @@ function addFav(){
     
     localStorage.setItem('favorites', JSON.stringify(a));
 }
+
+
+
+// function weatherToDom(city, temp, currWeather){
+//     console.log("Dest. Temperature: " + temp)
+//     console.log("Dest. Weather: " + currWeather)
+//     $("#city").append(city)
+//     $("#temp").append(temp)
+//     $("#condtions").append(currWeather)
+// }
+
 
