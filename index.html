@@ -179,7 +179,8 @@
                         <div id="map-canvas"></div>
                         <form class="form-inline">
                             Where would you like to go today?<br>
-                            <input type="text" name="Towhere">
+                            <input type="text" name="Towhere" id="fav-label">
+                            <button type="button" class="btn btn-primary" id="add-fav">FAV</button>
                             <button type="button" class="btn btn-primary">
                                 <a href="Results.html" style="color:#fff;">Submit</a>
                             </button>
@@ -240,6 +241,14 @@
     <script>
         //gets local location through IP address
         ipLookUp();
+
+
+        //Local Storage for Favs
+        var favs = JSON.parse(localStorage.getItem('favorites'));
+        $("#add-fav").on("click", function (event) {
+            event.preventDefault();
+            addFav();
+        });
     </script>
 </body>
 

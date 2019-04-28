@@ -5,6 +5,26 @@ function writeUber(response){
 }
 
 
+function addFav(){
+   var fav = {
+       label: $('#fav-label').val(),
+       lat: sessionStorage.getItem("eLat"),
+       lon: sessionStorage.getItem("eLong")
+   }
+   
+   var a = [];
+    console.log('**********',localStorage.getItem('favorites') );
+       
+    if(localStorage.getItem('favorites') != null){
+        a = JSON.parse(localStorage.getItem('favorites'));
+    }
+    
+    a.push(fav);
+    
+    localStorage.setItem('favorites', JSON.stringify(a));
+}
+
+
 
 // function weatherToDom(city, temp, currWeather){
 //     console.log("Dest. Temperature: " + temp)
@@ -13,4 +33,5 @@ function writeUber(response){
 //     $("#temp").append(temp)
 //     $("#condtions").append(currWeather)
 // }
+
 
