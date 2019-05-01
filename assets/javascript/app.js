@@ -25,6 +25,32 @@ function addFav(){
 }
 
 
+//make fav list
+$(".openbtn").on("click", function (event) {
+    event.preventDefault();
+    $("#fav-list").empty();
+    var arr = JSON.parse(localStorage.getItem('favorites'));
+    for (var i = 0; i < arr.length; i++) {
+        $('<a>', {
+            'lat': arr[i].lat,
+            'lon': arr[i].lon,
+            class: 'fav-item'
+        }).text(arr[i].label).appendTo('#fav-list');
+    }
+});
+
+
+//on click update destination
+$(document).on("click", ".fav-item", updateCoord);
+function updateCoord() {
+    var latitude = $(this).attr('lat');
+    var longitude = $(this).attr('lon');
+
+    sessionStorage.setItem("eLat", latitude);
+    sessionStorage.setItem("eLong", longitude);
+}
+
+
 
 // function weatherToDom(city, temp, currWeather){
 //     console.log("Dest. Temperature: " + temp)
