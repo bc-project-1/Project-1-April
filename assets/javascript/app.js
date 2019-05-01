@@ -48,6 +48,7 @@ function updateCoord() {
 
     sessionStorage.setItem("eLat", latitude);
     sessionStorage.setItem("eLong", longitude);
+
 }
 
 
