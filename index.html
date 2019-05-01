@@ -9,12 +9,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
+    <!-- <style>
         /* adjusts google map to cointaining box */
         
         #map-canvas {
+            /* height: 700px;
+            width: 700px; */
             height: 700px;
-            width: 700px;
+            width: 100%;
             margin: 0px;
             padding: 5px;
             /* NEED TO DO: align to center */
@@ -130,7 +132,7 @@
                 display: none;
             }
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -183,7 +185,7 @@
                             <input type="text" name="Towhere" id="fav-label">
                             <button type="button" class="btn btn-primary" id="add-fav">FAV</button>
                             <button type="button" class="btn btn-primary">
-                                <a href="results.html" style="color:#fff;">Submit</a>
+                                <a href="results.html" style="color:#fff;">Next</a>
                             </button>
                         </form>
                     </div>
@@ -209,10 +211,11 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Fav1</a>
+        <div id="fav-list" ></div>
+        <!-- <a href="#">Fav1</a>
         <a href="#">Fav2</a>
         <a href="#">Fav3</a>
-        <a href="#">Fav4</a>
+        <a href="#">Fav4</a> -->
     </div>
 
     /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */

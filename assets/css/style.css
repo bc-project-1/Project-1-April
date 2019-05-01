@@ -1,12 +1,15 @@
 
 /* adjusts google map to cointaining box */
 
+        
 #map-canvas {
+    /* height: 700px;
+    width: 700px; */
     height: 700px;
-    width: 700px;
+    width: 100%;
     margin: 0px;
     padding: 5px;
-
+    /* NEED TO DO: align to center */
 }
 /* Remove the navbar's default rounded borders and increase the bottom margin */
 
@@ -17,8 +20,12 @@
 /* Remove the jumbotron's default bottom margin */
 
 .jumbotron {
- margin-bottom: 0;
-}
+    background-image: url(assets/images/chicago1a.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 70%;
+    margin-bottom: 0;
+  }
 
 .panel-success>.panel-heading {
     color: #fff;
