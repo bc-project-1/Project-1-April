@@ -95,7 +95,7 @@ function getTransit() {
     var startingLon= sessionStorage.getItem("sLong");
 
     // test url below - just supply the key at the end
-    // queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=41.896280,-87.618851&destinations=41.950083%2C-87.647746&key=';
+    queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=41.896280,-87.618851&destinations=41.950083%2C-87.647746&key=';
     // queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='
     apiKey= ''
     console.log("before call // transit")

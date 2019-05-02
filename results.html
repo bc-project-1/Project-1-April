@@ -78,10 +78,6 @@
           <div class="panel-body" id="#">
             <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> -->
             <div class="form-group text-center">
-              <!-- <label for="inputdefault">Arrival Time</label>
-              <input class="form-control uber-time" id="inputdefault" type="text">
-              <label for="inputdefault">$Cost</label>
-              <input class="form-control uber-cost" id="inputdefault" type="text"> -->
               <p class="uber-time"></p>
               <p class="uber-cost"></p>
             </div>
@@ -100,10 +96,10 @@
           <p><span id="currWeather">Curr. Weather:</span></p>
           <h4>Transit Estimate</h3>
           <p><span id="transitDuration">Duration:</span> </p>
-          <p><span id="transitDistance">Curr. Weather:</span></p>
-          <h4>Transit Estimate</h3>
+          <p><span id="transitDistance">Distance:</span></p>
+          <h4>Walking Estimate</h3>
           <p><span id="walkingDuration">Duration:</span> </p>
-          <p><span id="walkingDistance">Curr. Weather:</span></p>
+          <p><span id="walkingDistance">Distance:</span></p>
         </div>
       </div>
     </div>
@@ -111,12 +107,6 @@
 
   <footer class="container-fluid text-center img-fluid">
 
-    <!-- <p>Just an Idea for later in the project process</p>
-        <form class="form-inline">Get deals:
-            <input type="email" class="form-control" size="50" placeholder="Email Address">
-            <button type="button" class="btn btn-danger">Sign Up</button>
-
-        </form> -->
   </footer>
 
 
@@ -130,9 +120,9 @@
     // getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
 
     getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
-    // getWeather();
-    // getTransit();
-    // getWalking();
+    getWeather();
+    getTransit();
+    getWalking();
     
 
   </script>
