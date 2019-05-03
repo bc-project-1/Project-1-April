@@ -393,7 +393,8 @@
                     };
                     console.log(position.coords.latitude);
                     console.log(position.coords.longitude);
-
+                    sessionStorage.setItem("sLat", position.coords.latitude);
+                    sessionStorage.setItem("sLong", position.coords.longitude);
                     infoWindow.setPosition(pos);
                     infoWindow.setContent('Location found.');
                     infoWindow.open(map);
@@ -472,9 +473,9 @@
 
 
         firebase.database().ref().once('value').then(function (snapshot) {
-            console.log(snapshot);
+            //console.log(snapshot);
             gKey = snapshot.node_.children_.root_.value.value_;
-            console.log(gKey);
+            //console.log(gKey);
             var gScript = document.createElement('script');
             gScript.setAttribute('src', "https://maps.googleapis.com/maps/api/js?key=" + gKey + "&callback=initMap");
             document.body.appendChild(gScript);
