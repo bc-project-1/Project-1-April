@@ -225,11 +225,39 @@
   <script type="text/javascript" src="assets/javascript/api.js"></script>
   <script type="text/javascript" src="assets/javascript/app.js"></script>
 
+  <script>
+    gKey = '';
 
+    var config = {
+        apiKey: "AIzaSyC3B80wCH3buyVYpREMx1KueJfoGNAgGXo",
+        authDomain: "api-keys-f798d.firebaseapp.com",
+        databaseURL: "https://api-keys-f798d.firebaseio.com",
+        projectId: "api-keys-f798d",
+        storageBucket: "api-keys-f798d.appspot.com",
+        messagingSenderId: "110897771681"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+
+
+    firebase.database().ref().once('value').then(function (snapshot) {
+        //console.log(snapshot);
+        gKey = snapshot.node_.children_.root_.value.value_;
+        //console.log(gKey);
+     
+
+         
+    });
+    
+
+</script>
   <script>
     //get Uber, weather, transit, and walking info on page load
-
-    // getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
+    console.log(sessionStorage.getItem("sLat"));
+    console.log(sessionStorage.getItem("sLong"));
+    console.log(sessionStorage.getItem("eLat"));
+    console.log(sessionStorage.getItem("eLong"));
+    getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
     getWeather();
     getTransit();
     getWalking();
