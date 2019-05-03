@@ -115,11 +115,9 @@
 
 
   <script>
-    //get Uber info on page load
+    //get Uber, weather, transit, and walking info on page load
 
     // getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
-
-    getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
     getWeather();
     getTransit();
     getWalking();
