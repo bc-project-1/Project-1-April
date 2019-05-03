@@ -1,42 +1,8 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-// GOOGLE GEOLOCATION API
-function getUserLocation() {
 
 
 
 
-    // Initialize Firebase
-    var gKey;
 
-    var config = {
-        apiKey: "AIzaSyC3B80wCH3buyVYpREMx1KueJfoGNAgGXo",
-        authDomain: "api-keys-f798d.firebaseapp.com",
-        databaseURL: "https://api-keys-f798d.firebaseio.com",
-        projectId: "api-keys-f798d",
-        storageBucket: "api-keys-f798d.appspot.com",
-        messagingSenderId: "110897771681"
-    };
-    firebase.initializeApp(config);
-    var database = firebase.database();
-
-
-    firebase.database().ref().once('value').then(function (snapshot) {
-        console.log(snapshot);
-        gKey = snapshot.node_.children_.root_.value.value_;
-
-        googleGeolocation(gKey);
-    });
-}
-
-function googleGeolocation(key) {
-    //API Calls
-    //var queryURL = "https://cors-anywhere.herokuapp.com/googleapis.com/geolocation/v1/geolocate?key="
-    //var queryURL = "https://www.googleapis.com/geolocation/v1/geolocate?key="
-    var queryURL = "https://cors-anywhere.herokuapp.com/maps.googleapis.com/maps/api/js?callback=initMap&key=">
-        $.ajax({ url: (queryURL + key), method: "GET" })
-=======
 // Initialize Firebase
 gKey = '';
 
@@ -148,7 +114,7 @@ function googleGeolocation() {
     //var queryURL = "https://www.googleapis.com/geolocation/v1/geolocate?key="
     var queryURL = "https://cors-anywhere.herokuapp.com/maps.googleapis.com/maps/api/js?callback=initMap&key=" >
         $.ajax({ url: (queryURL + gKey), method: "GET" })
->>>>>>> Stashed changes
+
             .then(function (response) {
                 console.log(response);
                 // sessionStorage.setItem("sLat", response.lat);
@@ -160,10 +126,6 @@ function googleGeolocation() {
 
 
 
-<<<<<<< Updated upstream
->>>>>>> GeolocationAPI
-=======
->>>>>>> Stashed changes
 //User location through IP api
 function ipLookUp() {
     $.ajax('http://ip-api.com/json')
@@ -230,37 +192,19 @@ function getUberApi(startLat, startLong, endLat, endLong) {
 // ================== Weather api call ================================================================
 
 function getWeather() {
-<<<<<<< Updated upstream
-<<<<<<< HEAD
+
     var lat= sessionStorage.getItem("eLat");
     var lon= sessionStorage.getItem("eLong");
-=======
+
 
     var lat = sessionStorage.getItem("eLat");
     var lon = sessionStorage.getItem("eLong");
->>>>>>> Stashed changes
+
     queryURL = 'http://api.openweathermap.org/data/2.5/weather?';
     weatherLat = 'lat=' + lat;
     weatherLon = '&lon=' + lon;
     accessKey = '&APPID=0ff132ddd83d15f772c6169f2ee83a2b';
     units = "&units=imperial"
-<<<<<<< Updated upstream
-    queryURL += weatherLat + weatherLon + units + apiKey;
-
-$.ajax({ url: queryURL, method: "GET" })
-    .then(function (response) {
-        var temp =  response.main.temp
-        var currWeather = response.weather[0].description
-        var city = response.name
-        console.log("Dest. Temperature: " + temp)
-        console.log("Dest. Weather: " + currWeather)
-        console.log(response.name)
-        $("#city").append(" "+city)
-        $("#temp").append(" "+temp)
-        $("#currWeather").append(" "+currWeather)
-        // weatherToDom()
-    });
-=======
 
     var lat = sessionStorage.getItem("eLat");
     var lon = sessionStorage.getItem("eLong");
@@ -269,8 +213,7 @@ $.ajax({ url: queryURL, method: "GET" })
     weatherLon = '&lon=' + lon;
     accessKey = '&APPID=0ff132ddd83d15f772c6169f2ee83a2b';
     units = "&units=imperial"
-=======
->>>>>>> Stashed changes
+
     queryURL += weatherLat + weatherLon + units + accessKey;
 
     $.ajax({ url: queryURL, method: "GET" })
@@ -286,10 +229,7 @@ $.ajax({ url: queryURL, method: "GET" })
             $("#currWeather").append(" " + currWeather)
             // weatherToDom()
         });
-<<<<<<< Updated upstream
->>>>>>> GeolocationAPI
-=======
->>>>>>> Stashed changes
+
 }
 
 function getTransit() {
