@@ -68,7 +68,7 @@ function getWeather() {
 
     var lat = sessionStorage.getItem("eLat");
     var lon = sessionStorage.getItem("eLong");
-    queryURL = 'http://api.openweathermap.org/data/2.5/weather?';
+    queryURL = 'https://api.openweathermap.org/data/2.5/weather?';
     weatherLat = 'lat=' + lat;
     weatherLon = '&lon=' + lon;
     accessKey = '&APPID=0ff132ddd83d15f772c6169f2ee83a2b';
