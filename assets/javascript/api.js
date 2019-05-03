@@ -93,10 +93,20 @@ function getTransit() {
     var destinationLon= sessionStorage.getItem("eLong");
     var startingLat= sessionStorage.getItem("sLat");
     var startingLon= sessionStorage.getItem("sLong");
+<<<<<<< Updated upstream
     queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='
     apiKey= gKey
     console.log("transit")
     queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + "&mode=transit" + apiKey
+=======
+
+    // test url below - just supply the key at the end
+    queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=41.896280,-87.618851&destinations=41.950083%2C-87.647746&key=AIzaSyDB9aZXH-_I8H27GfcDZIqt9M13alme0MM';
+    // queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='
+    // apiKey= ''
+    console.log("before call // transit")
+    // queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + apiKey
+>>>>>>> Stashed changes
      $.ajax({ url: queryURL, method: "GET"})
         .then(function (response) {
             console.log("running"); 
@@ -114,10 +124,18 @@ function getWalking() {
     var destinationLon= sessionStorage.getItem("eLong");
     var startingLat= sessionStorage.getItem("sLat");
     var startingLon= sessionStorage.getItem("sLong");
+<<<<<<< Updated upstream
     apiKey= gKey
     queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='
     queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + "&mode=walking" + apiKey
     console.log("walking")
+=======
+    apiKey= ''
+    // test url below- just supply key
+    queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=41.896280,-87.618851&destinations=41.950083%2C-87.647746&mode=walking&key=AIzaSyDB9aZXH-_I8H27GfcDZIqt9M13alme0MM';
+     console.log("before call")
+     console.log("walking")
+>>>>>>> Stashed changes
 
     $.ajax({ url: queryURL, method: "GET"})
         .then(function (response) {
