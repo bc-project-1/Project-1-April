@@ -125,4 +125,12 @@ footer {
     footer {
         display: none;
     }
+
+    .navbar-nav>li {
+        float: left;
+        padding-top: 17px;
+    }
+    inverse .navbar-nav>li>a {
+        color:#fff;
+    }
 }
