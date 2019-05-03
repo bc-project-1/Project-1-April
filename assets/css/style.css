@@ -12,7 +12,15 @@
     /* NEED TO DO: align to center */
 }
 /* Remove the navbar's default rounded borders and increase the bottom margin */
-
+#map {
+    /* height: 700px;
+    width: 700px; */
+    height: 700px;
+    width: 100%;
+    margin: 0px;
+    padding: 5px;
+    /* NEED TO DO: align to center */
+}
 .navbar {
     margin-bottom: 50px;
     border-radius: 0;
