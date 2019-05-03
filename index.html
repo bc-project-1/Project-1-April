@@ -27,130 +27,6 @@
             padding: 48px;
         }
     </style>
-    <!-- <style>
-        /* adjusts google map to cointaining box */
-        
-        #map-canvas {
-            /* height: 700px;
-            width: 700px; */
-            height: 700px;
-            width: 100%;
-            margin: 0px;
-            padding: 5px;
-            /* NEED TO DO: align to center */
-        }
-        /* Remove the navbar's default rounded borders and increase the bottom margin */
-        
-        .navbar {
-            margin-bottom: 50px;
-            border-radius: 0;
-        }
-        /* Remove the jumbotron's default bottom margin */
-        
-        .jumbotron {
-         margin-bottom: 0;
-        }
-        
-        .panel-success>.panel-heading {
-            color: #fff;
-            background-color: #3c763d;
-            border-color: #d6e9c6;
-        }
-        /*place collapse sidepanel css here*/
-        /* The sidebar menu */
-        
-        .sidebar {
-            height: 100%;
-            /* 100% Full-height */
-            width: 0;
-            /* 0 width - change this with JavaScript */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Stay on top */
-            top: 0;
-            left: 0;
-            background-color: #111;
-            /* Black*/
-            overflow-x: hidden;
-            /* Disable horizontal scroll */
-            padding-top: 60px;
-            /* Place content 60px from the top */
-            transition: 0.5s;
-            /* 0.5 second transition effect to slide in the sidebar */
-        }
-        /* The sidebar links */
-        
-        .sidebar a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-        /* When you mouse over the navigation links, change their color */
-        
-        .sidebar a:hover {
-            color: #f1f1f1;
-        }
-        /* Position and style the close button (top right corner) */
-        
-        .sidebar .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-        /* The button used to open the sidebar */
-        
-        .openbtn {
-            font-size: 20px;
-            cursor: pointer;
-            background-color: #111;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-        }
-        
-        .openbtn:hover {
-            background-color: #444;
-        }
-        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-        
-        #main {
-            transition: margin-left .5s;
-            /* If you want a transition effect */
-            padding: 20px;
-        }
-        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-        
-        @media screen and (max-height: 450px) {
-            .sidebar {
-                padding-top: 15px;
-            }
-            .sidebar a {
-                font-size: 18px;
-            }
-        }
-        /* Add a gray background color and some padding to the footer */
-        
-        footer {
-            background-image: url(assets/images/NUBanner1.png);
-            background-repeat: no-repeat;
-            /* background-attachment: fixed; */
-            background-position: center;
-            background-color: #f2f2f2;
-            padding: 48px;
-        }
-        
-        @media only screen and (max-width: 768px) {
-            footer {
-                display: none;
-            }
-        }
-    </style> -->
 </head>
 
 <body>
@@ -166,27 +42,14 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <!-- <li class="active"><a href="#">Home</a></li>-->
                     <li>
-
-
                         <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Get
                             started</a>
-
                     </li>
                     <li id="main">
                         <button class="openbtn" onclick="openNav()">&#9734; Favorites</button>
-                        <!-- <h2>Collapsed Sidebar</h2>
-                        <p>Content...</p> -->
                     </li>
-                    <!--<li><a href="#">Deals</a></li>-->
-                    <!--<li><a href="#">Stores</a></li>-->
-                    <!--<li><a href="#">Contact</a></li>-->
                 </ul>
-                <!-- <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-                </ul>-->
             </div>
         </div>
     </nav>
@@ -194,23 +57,25 @@
     <div class="jumbotron">
         <div class="container text-center">
             <h1>What Time is it</h1>
-            <p>Helping you to navigate this busy world</p>
+            <p style="color:#fff;">Helping you to navigate this busy world</p>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-offset-2 col-sm-8">
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><a href="#" class="btn btn-success" data-toggle="modal"
-                            data-target="#basicModal">Get Started</a></div>
+                    <div class="panel-heading">
+                        <p class=" panelTop text-center">Choose your destination<br>Where would you like to go today?
+                        </p>
+                    </div>
                     <div class="panel-body" id="#">
-                        <!-- <div id="map-canvas"></div> -->
                         <div id="map"></div>
                         <form class="form-inline">
                             <div class="col text-center">
-                               Where would you like to go today?<br>
+                                <p>Click NEXT button for your arrival times<br>
+                                    FAV button to create a favorite location.</p><br>
                                 <button type="button" class="btn btn-primary">
-                                    <a href="results.html" style="color:#fff;">Next</a>
+                                    <a href="results.html" style="color:#fff;">NEXT</a>
                                 </button>
                                 <input type="text" name="Towhere" id="fav-label">
                                 <button type="button" class="btn btn-primary" id="add-fav">FAV</button>
@@ -218,7 +83,6 @@
                             </div>
                         </form>
                     </div>
-                    <!-- <div class="panel-footer"><button type="button" class="btn btn-primary">Book</button></div> -->
                 </div>
 
             </div>
@@ -239,36 +103,6 @@
         <div id="fav-list"></div>
 
     </div>
-    <div class="container">
-        <h1 class="display-4 text-center mb-4">Bootstrap Modals</h1>
-
-        <div class="row mb-4">
-            <div class="col text-center">
-                <h3>The Basic Modal</h3>
-                <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Click to open
-                    Modal</a>
-            </div>
-        </div>
-
-        <div class="row mb-4">
-            <div class="col text-center">
-                <h3>The Large Modal</h3>
-                <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal"
-                    data-toggle="tooltip" data-placement="top" title="Tooltip on top">Click to open
-                    Modal</a>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col text-center">
-                <h3>The Small Modal</h3>
-                <a href="#" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#smallModal">Click to open
-                    Modal</a>
-            </div>
-        </div>
-
-    </div>
-
     <!-- basic modal -->
     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
@@ -407,7 +241,7 @@
                 // Browser doesn't support Geolocation
                 handleLocationError(false, infoWindow, map.getCenter());
             }
-           // google.maps.event.addListenerOnce(map, 'idle', function(){
+            // google.maps.event.addListenerOnce(map, 'idle', function(){
             google.maps.event.addListener(map, 'click', function (e) {
                 setMapOnAll(null);
                 console.log(e.latLng);
@@ -426,15 +260,15 @@
                 markers.push(marker);
                 map.panTo(position);
             }
-        //});
+            //});
 
-        function setMapOnAll(map) {
-            for (var i = 0; i < markers.length; i++) {
-                markers[i].setMap(map);
+            function setMapOnAll(map) {
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(map);
+                }
             }
-        }
 
-        
+
         }
 
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -447,9 +281,9 @@
 
         var markers = [];
 
-     // This event listener calls addMarker() when the map is cli2cked.
-            
-            
+        // This event listener calls addMarker() when the map is cli2cked.
+
+
 
         //Local Storage for Favs
         var favs = JSON.parse(localStorage.getItem('favorites'));
@@ -481,12 +315,12 @@
             gScript.setAttribute('src', "https://maps.googleapis.com/maps/api/js?key=" + gKey + "&callback=initMap");
             document.body.appendChild(gScript);
 
-             
+
         });
-        
+
 
     </script>
- 
+
 </body>
 
 </html>

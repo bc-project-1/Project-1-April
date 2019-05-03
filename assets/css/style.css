@@ -2,15 +2,7 @@
 /* adjusts google map to cointaining box */
 
         
-#map-canvas {
-    /* height: 700px;
-    width: 700px; */
-    height: 700px;
-    width: 100%;
-    margin: 0px;
-    padding: 5px;
-    /* NEED TO DO: align to center */
-}
+
 /* Remove the navbar's default rounded borders and increase the bottom margin */
 #map {
     /* height: 700px;
@@ -34,6 +26,12 @@
     background-size: 100% 70%;
     margin-bottom: 0;
   }
+
+ p.panelTop {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
 
 .panel-success>.panel-heading {
     color: #fff;
