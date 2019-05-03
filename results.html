@@ -21,54 +21,12 @@
     footer {
       background-image: url(assets/images/NUBanner1.png);
       background-repeat: no-repeat;
-      /* background-attachment: fixed; */
       background-position: center;
       background-color: #f2f2f2;
       padding: 48px;
     }
   </style>
-  <!-- <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */
 
-    .navbar {
-      margin-bottom: 50px;
-      border-radius: 0;
-    }
-
-    /* Remove the jumbotron's default bottom margin */
-
-    .jumbotron {
-      background-image: url(assets/images/chicago1a.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100% 70%;
-      margin-bottom: 0;
-    }
-
-    .panel-success>.panel-heading {
-      color: #fff;
-      background-color: #3c763d;
-      border-color: #d6e9c6;
-    }
-
-    /* Add a gray background color and some padding to the footer */
-
-    footer {
-      background-image: url(assets/images/NUBanner1.png);
-      background-repeat: no-repeat;
-      /* background-attachment: fixed; */
-      background-position: center;
-      background-color: #f2f2f2;
-      padding: 48px;
-    }
-
-    @media only screen and (max-width: 768px) {
-      footer {       
-        display: none; 
-      }
-    }
-
-  </style> -->
 </head>
 
 <body>
@@ -80,28 +38,21 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <!-- <a class="navbar-brand" href="#">Logo</a> -->
+
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <!-- <li class="active"><a href="#">Home</a></li>-->
+
           <li>
-            <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Get
+            <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#basicModal">Get
               started</a>
           </li>
           <li id="main">
             <button class="openbtn" onclick="openNav()">&#9734; Favorites</button>
-            <!-- <h2>Collapsed Sidebar</h2>
-                    <p>Content...</p> -->
+
           </li>
-          <!--<li><a href="#">Deals</a></li>-->
-          <!--<li><a href="#">Stores</a></li>-->
-          <!--<li><a href="#">Contact</a></li>-->
-        </ul>
-        <!-- <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-            </ul>-->
+
+
       </div>
     </div>
   </nav>
@@ -129,140 +80,209 @@
       </div>
       <div class="col-sm-4">
         <div class="panel panel-success">
-          <div class="panel-heading">Alternative Options</div>
+          <div class="panel-heading">Destination</div>
           <div class="panel-body" id="#">
-            <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">            -->
-          </div>
-          <p><span id="city">Dest. City:</span></p>
-          <p><span id="temp">Temperature:</span> </p>
-          <p><span id="currWeather">Curr. Weather:</span></p>
-          <h4>Transit Estimate</h3>
+            <h3>Transit Estimate</h3>
             <p><span id="transitDuration">Duration:</span> </p>
             <p><span id="transitDistance">Distance:</span></p>
-            <h4>Walking Estimate</h3>
-              <p><span id="walkingDuration">Duration:</span> </p>
-              <p><span id="walkingDistance">Distance:</span></p>
+            <h3>Walking Estimate</h3>
+            <p><span id="walkingDuration">Duration:</span> </p>
+            <p><span id="walkingDistance">Distance:</span></p>
+          </div>
+
         </div>
       </div>
+
       <div class="col-sm-4">
         <div class="panel panel-warning">
-          <div class="panel-heading">Alternative Options</div>
+          <div class="panel-heading">Weather</div>
           <div class="panel-body" id="#">
-            <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">            -->
+            <p><span id="city">Dest. City:</span></p>
+            <p><span id="temp">Temperature:</span> </p>
+            <p><span id="currWeather">Curr. Weather:</span></p>
           </div>
-          <p><span id="city">Dest. City:</span></p>
-          <p><span id="temp">Temperature:</span> </p>
-          <p><span id="currWeather">Curr. Weather:</span></p>
-          <h4>Transit Estimate</h3>
-            <p><span id="transitDuration">Duration:</span> </p>
-            <p><span id="transitDistance">Distance:</span></p>
-            <h4>Walking Estimate</h3>
-              <p><span id="walkingDuration">Duration:</span> </p>
-              <p><span id="walkingDistance">Distance:</span></p>
+        </div>
+      </div>
+    </div><br>
+
+    <footer class="container-fluid text-center img-fluid">
+    
+    </footer>
+
+    <!-- Sidebar code  -->
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div id="fav-list"></div>
+    </div>
+    <!-- basic modal -->
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h3 class="modal-title" id="myModalLabel">Welcome</h3>
+            <p> Let’s get rolling. To select your location, feel free to click on the map<br>
+              this will get your arrival location.<br>
+              or to type your address in below. This will prompt a chart of your most<br>
+              convenient route to choose from. Using the device of your choosing,<br> you will know the
+              estimated time, cost and current weather of your
+              selected location.</p>
+          </div>
+          <div class="modal-body">
+            <h3>Selection Process</h3>
+            <ol>
+              <li>Choose your location on the map provided.</li>
+              <li>Click the NEXT button for your results</li>
+              <li>Submit it to favorites if you wish to save it.</li>
+              <li>Name your favorite in the text box.</li>
+              <li>Click the FAV button for your results</li>
+            </ol>
+            <div>
+              <h3>Picking a location</h3>
+              <img src="assets/images/MapView1.png" alt=""><span>
+                <h3>Picking a Favorite</h3>
+                <img src="assets/images/MapView2.png" alt="">
+              </span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div><br>
 
-  <footer class="container-fluid text-center img-fluid">
-    123
-  </footer>
 
-  <!-- Sidebar code  -->
+    <!-- Large modal -->
+    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h3 class="modal-title" id="myModalLabel">Welcome</h3>
+            <p> Let’s get rolling. To select your location, feel free to select on the map<br>
+              or to type your address in below. This will prompt a chart of your most<br>
+              convenient route to choose from. Using the device of your choosing,<br> you will know the
+              estimated time, cost and current weather of your
+              selected location.</p>
 
-  <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div id="fav-list"></div>
-  </div>
+          </div>
+          <div class="modal-body">
 
-  <!-- large modal -->
-  <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h3>Modal Body</h3>
+            <ol>
+              <li>Choose your location on the map provided.</li>
+              <li>Submit it to favorites if you wish to save it.</li>
+              <li>Compare which way works best for you.</li>
+              <li>Click the next button for your results</li>
+            </ol>
+            <div>
+              <h3>Picking a location</h3>
+              <img src="assets/images/MapView1.png" alt=""><span>
+                <h3>Picking a Favorite</h3>
+                <img src="assets/images/MapView1.png" alt="">
+              </span>
+            </div>
 
-          <h5>Popover in a modal</h5>
-          <p>This <a href="#" role="button" class="btn btn-secondary popover-test" data-toggle="tooltip"
-              data-placement="top" title="Tooltip on top"
-              data-content="Popover body content is set in this attribute.">button</a> triggers a popover
-            on click.</p>
-          <hr>
-          <h5>Tooltips in a modal</h5>
-          <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test"
-              title="Tooltip">that link</a> have tooltips on hover.</p>
+            <h5>Popover in a modal</h5>
+            <p>This <a href="#" role="button" class="btn btn-secondary popover-test" data-toggle="tooltip"
+                data-placement="top" title="Tooltip on top"
+                data-content="Popover body content is set in this attribute.">button</a> triggers a popover
+              on click.</p>
+            <hr>
+            <h5>Tooltips in a modal</h5>
+            <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test"
+                title="Tooltip">that link</a> have tooltips on hover.</p>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-    }
+    <!-- small modal -->
+    <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Small Modal</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3>Modal Body</h3>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-    function closeNav() {
-      document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
-    }
-  </script>
+    <script>
+      /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
 
-  <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
-  <script type="text/javascript" src="assets/javascript/api.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+      /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
 
- 
-  <script>
-
-gKey = '';
-
-var config = {
-    apiKey: "AIzaSyC3B80wCH3buyVYpREMx1KueJfoGNAgGXo",
-    authDomain: "api-keys-f798d.firebaseapp.com",
-    databaseURL: "https://api-keys-f798d.firebaseio.com",
-    projectId: "api-keys-f798d",
-    storageBucket: "api-keys-f798d.appspot.com",
-    messagingSenderId: "110897771681"
-};
-firebase.initializeApp(config);
-var database = firebase.database();
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+    <script type="text/javascript" src="assets/javascript/api.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 
-firebase.database().ref().once('value').then(function (snapshot) {
-    //console.log(snapshot);
-    gKey = snapshot.node_.children_.root_.value.value_;
-    console.log(gKey);
- 
+    <script>
 
-    console.log(sessionStorage.getItem("sLat"));
-    console.log(sessionStorage.getItem("sLong"));
-    console.log(sessionStorage.getItem("eLat"));
-    console.log(sessionStorage.getItem("eLong"));
-    getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
-    getWeather();
-    getTransit(gKey);
-    getWalking(gKey);
-});
+      gKey = '';
+
+      var config = {
+        apiKey: "AIzaSyC3B80wCH3buyVYpREMx1KueJfoGNAgGXo",
+        authDomain: "api-keys-f798d.firebaseapp.com",
+        databaseURL: "https://api-keys-f798d.firebaseio.com",
+        projectId: "api-keys-f798d",
+        storageBucket: "api-keys-f798d.appspot.com",
+        messagingSenderId: "110897771681"
+      };
+      firebase.initializeApp(config);
+      var database = firebase.database();
+
+
+      firebase.database().ref().once('value').then(function (snapshot) {
+        //console.log(snapshot);
+        gKey = snapshot.node_.children_.root_.value.value_;
+        console.log(gKey);
+
+
+        console.log(sessionStorage.getItem("sLat"));
+        console.log(sessionStorage.getItem("sLong"));
+        console.log(sessionStorage.getItem("eLat"));
+        console.log(sessionStorage.getItem("eLong"));
+        getUberApi(sessionStorage.getItem("sLat"), sessionStorage.getItem("sLong"), sessionStorage.getItem("eLat"), sessionStorage.getItem("eLong"));
+        getWeather();
+        getTransit(gKey);
+        getWalking(gKey);
+      });
 
     //get Uber, weather, transit, and walking info on page load
-  
 
 
-  </script>
+
+    </script>
 </body>
 
 </html>
