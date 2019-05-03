@@ -27,9 +27,23 @@
     margin-bottom: 0;
   }
 
+  span.b {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;    
+    background-color: yellow; 
+  }
+
  p.panelTop {
     margin-bottom: 15px;
     font-size: 21px;
+    font-weight: 200;
+}
+p.modalTop {
+    margin-bottom: 15px;
+    font-size: 18px;
     font-weight: 200;
 }
 

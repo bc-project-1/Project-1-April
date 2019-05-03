@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Get
+                        <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#basicModal">Get
                             started</a>
                     </li>
                     <li id="main">
@@ -103,39 +103,79 @@
         <div id="fav-list"></div>
 
     </div>
+
     <!-- basic modal -->
     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Basic Modal</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+                    <h3 class="modal-title" id="myModalLabel">Welcome</h3>
+                    <p> Let’s get rolling. To select your location, feel free to click on the map<br>
+                        this will get your arrival location.<br>
+                        or to type your address in below. This will prompt a chart of your most<br>
+                        convenient route to choose from. Using the device of your choosing,<br> you will know the
+                        estimated time, cost and current weather of your
+                        selected location.</p>
                 </div>
                 <div class="modal-body">
-                    <h3>Modal Body</h3>
+                    <h3>Selection Process</h3>
+                    <ol>
+                            <li>Choose your location on the map provided.</li>
+                            <li>Click the NEXT button for your results</li>
+                            <li>Submit it to favorites if you wish to save it.</li>
+                            <li>Name your favorite in the text box.</li>
+                            <li>Click the FAV button for your results</li>
+                        </ol>
+                        <div>
+                            <h3>Picking a location</h3>
+                            <img src="assets/images/MapView1.png" alt=""><span>
+                                <h3>Picking a Favorite</h3>
+                                <img src="assets/images/MapView2.png" alt="">
+                            </span>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- large modal -->
-    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+
+    <!-- Large modal -->
+    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+                    <h3 class="modal-title" id="myModalLabel">Welcome</h3>
+                    <p> Let’s get rolling. To select your location, feel free to select on the map<br>
+                        or to type your address in below. This will prompt a chart of your most<br>
+                        convenient route to choose from. Using the device of your choosing,<br> you will know the
+                        estimated time, cost and current weather of your
+                        selected location.</p>
+
                 </div>
                 <div class="modal-body">
-                    <h3>Modal Body</h3>
+
+                    <ol>
+                        <li>Choose your location on the map provided.</li>
+                        <li>Submit it to favorites if you wish to save it.</li>
+                        <li>Compare which way works best for you.</li>
+                        <li>Click the next button for your results</li>
+                    </ol>
+                    <div>
+                        <h3>Picking a location</h3>
+                        <img src="assets/images/MapView1.png" alt=""><span>
+                            <h3>Picking a Favorite</h3>
+                            <img src="assets/images/MapView1.png" alt="">
+                        </span>
+                    </div>
 
                     <h5>Popover in a modal</h5>
                     <p>This <a href="#" role="button" class="btn btn-secondary popover-test" data-toggle="tooltip"
@@ -150,14 +190,13 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- small modal -->
-    <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
