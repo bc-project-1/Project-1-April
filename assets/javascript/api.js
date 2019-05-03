@@ -1,131 +1,4 @@
 
-
-
-
-
-// Initialize Firebase
-// gKey = '';
-
-// var config = {
-//     apiKey: "AIzaSyC3B80wCH3buyVYpREMx1KueJfoGNAgGXo",
-//     authDomain: "api-keys-f798d.firebaseapp.com",
-//     databaseURL: "https://api-keys-f798d.firebaseio.com",
-//     projectId: "api-keys-f798d",
-//     storageBucket: "api-keys-f798d.appspot.com",
-//     messagingSenderId: "110897771681"
-// };
-// firebase.initializeApp(config);
-// var database = firebase.database();
-
-
-// firebase.database().ref().once('value').then(function (snapshot) {
-//     console.log(snapshot);
-//     gKey = snapshot.node_.children_.root_.value.value_;
-// });
-
-
-// // GOOGLE GEOLOCATION API
-// function googleMap() {
-//     // Note: This example requires that you consent to location sharing when
-//     // prompted by your browser. If you see the error "The Geolocation service
-//     // failed.", it means you probably did not give permission for the browser to
-//     // locate you.
-//     var map, infoWindow;
-//     function initMap() {
-//         map = new google.maps.Map(document.getElementById('map'), {
-//             center: { lat: -34.397, lng: 150.644 },
-//             zoom: 6
-//         });
-//         infoWindow = new google.maps.InfoWindow;
-
-     
-
-
-//         // Try HTML5 geolocation.
-//         if (navigator.geolocation) {
-//             navigator.geolocation.getCurrentPosition(function (position) {
-//                 var pos = {
-//                     lat: position.coords.latitude,
-//                     lng: position.coords.longitude
-//                 };
-//                 console.log(position.coords.latitude);
-//                 console.log(position.coords.longitude);
-
-//                 infoWindow.setPosition(pos);
-//                 infoWindow.setContent('Location found.');
-//                 infoWindow.open(map);
-//                 map.setCenter(pos);
-//             }, function () {
-//                 handleLocationError(true, infoWindow, map.getCenter());
-//             });
-//         } else {
-//             // Browser doesn't support Geolocation
-//             handleLocationError(false, infoWindow, map.getCenter());
-//         }
-//     }
-
-//     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-//         infoWindow.setPosition(pos);
-//         infoWindow.setContent(browserHasGeolocation ?
-//             'Error: The Geolocation service failed.' :
-//             'Error: Your browser doesn\'t support geolocation.');
-//         infoWindow.open(map);
-//     }
-
-//     var markers = [];
-
-//     $(document).ready(function () {     // This event listener calls addMarker() when the map is cli2cked.
-//         google.maps.event.addListener(map, 'click', function (e) {
-//             //setMapOnAll(null);
-//             setMapOnAll(null);
-//             console.log(e.latLng);
-//             console.log(e.latLng.lat());
-//             console.log(e.latLng.lng());
-//             sessionStorage.setItem("eLat", e.latLng.lat());
-//             sessionStorage.setItem("eLong", e.latLng.lng());
-//             placeMarker(e.latLng, map);
-//         });
-
-//         function placeMarker(position, map) {
-//             var marker = new google.maps.Marker({
-//                 position: position,
-//                 map: map
-//             });
-//             markers.push(marker);
-//             map.panTo(position);
-//         }
-//     });
-
-//     function setMapOnAll(map) {
-//         for (var i = 0; i < markers.length; i++) {
-//             markers[i].setMap(map);
-//         }
-//     }
-
-
-
-
-
-// }
-
-// function googleGeolocation(key) {
-//     //API Calls
-//     //var queryURL = "https://cors-anywhere.herokuapp.com/googleapis.com/geolocation/v1/geolocate?key="
-//     //var queryURL = "https://www.googleapis.com/geolocation/v1/geolocate?key="
-//     var queryURL = "https://cors-anywhere.herokuapp.com/maps.googleapis.com/maps/api/js?callback=initMap&key=">
-//         $.ajax({ url: (queryURL + key), method: "GET" })
-//             .then(function (response) {
-//                 console.log(response);
-//                 // sessionStorage.setItem("sLat", response.lat);
-//                 // sessionStorage.setItem("sLong", response.lon);
-//                 // startMap();
-
-//             });
-// }
-
-
-
-
 //User location through IP api
 function ipLookUp() {
     $.ajax('http://ip-api.com/json')
@@ -219,7 +92,7 @@ function getWeather() {
 
 }
 
-function getTransit() {
+function getTransit(key) {
 
     var destinationLat= sessionStorage.getItem("eLat");
     var destinationLon= sessionStorage.getItem("eLong");
@@ -227,10 +100,10 @@ function getTransit() {
     var startingLon= sessionStorage.getItem("sLong");
 
     queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='
-    apiKey= gKey
+    apiKey= key
     console.log("transit")
-    queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + "&mode=transit" + apiKey
-
+    queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + "&mode=transit" + "&key=" + apiKey
+    console.log(queryURL)
      $.ajax({ url: queryURL, method: "GET"})
         .then(function (response) {
             console.log("running");
@@ -243,16 +116,17 @@ function getTransit() {
         });
 }
 
-function getWalking() {
+function getWalking(key) {
 
     var destinationLat= sessionStorage.getItem("eLat");
     var destinationLon= sessionStorage.getItem("eLong");
     var startingLat= sessionStorage.getItem("sLat");
     var startingLon= sessionStorage.getItem("sLong");
-    apiKey= gKey
+    apiKey= key
     queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='
-    queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + "&mode=walking" + apiKey
+    queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + "&mode=walking" + "&key=" + apiKey
     console.log("walking")
+    console.log(queryURL)
 
     $.ajax({ url: queryURL, method: "GET" })
         .then(function (response) {
