@@ -233,18 +233,18 @@ function getWeather() {
 }
 
 function getTransit() {
-    var destinationLat = sessionStorage.getItem("eLat");
-    var destinationLon = sessionStorage.getItem("eLong");
-    var startingLat = sessionStorage.getItem("sLat");
-    var startingLon = sessionStorage.getItem("sLong");
 
-    // test url below - just supply the key at the end
-    // queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=41.896280,-87.618851&destinations=41.950083%2C-87.647746&key=';
-    // queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='
-    apiKey = ''
-    console.log("before call // transit")
-    queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + apiKey
-    $.ajax({ url: queryURL, method: "GET" })
+    var destinationLat= sessionStorage.getItem("eLat");
+    var destinationLon= sessionStorage.getItem("eLong");
+    var startingLat= sessionStorage.getItem("sLat");
+    var startingLon= sessionStorage.getItem("sLong");
+
+    queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='
+    apiKey= gKey
+    console.log("transit")
+    queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + "&mode=transit" + apiKey
+
+     $.ajax({ url: queryURL, method: "GET"})
         .then(function (response) {
             console.log("running");
             console.log(response);
@@ -257,14 +257,14 @@ function getTransit() {
 }
 
 function getWalking() {
-    var destinationLat = sessionStorage.getItem("eLat");
-    var destinationLon = sessionStorage.getItem("eLong");
-    var startingLat = sessionStorage.getItem("sLat");
-    var startingLon = sessionStorage.getItem("sLong");
-    apiKey = ''
-    // test url below- just supply key
-    queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=41.896280,-87.618851&destinations=41.950083%2C-87.647746&mode=walking&key=';
-    console.log("before call")
+
+    var destinationLat= sessionStorage.getItem("eLat");
+    var destinationLon= sessionStorage.getItem("eLong");
+    var startingLat= sessionStorage.getItem("sLat");
+    var startingLon= sessionStorage.getItem("sLong");
+    apiKey= gKey
+    queryURL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='
+    queryURL += startingLat + "," + startingLon + "&destinations=" + destinationLat + "," + destinationLon + "&mode=walking" + apiKey
     console.log("walking")
 
     $.ajax({ url: queryURL, method: "GET" })
