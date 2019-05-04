@@ -13,10 +13,12 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     .jumbotron {
-      background-image: url(assets/images/chicago1a.png);
+      /* background-image: url(assets/images/chicago1a.png);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 100% 70%;
+      background-size: 100% 70%; */
+      background-color: #333333;
+      color: #fff;
       margin-bottom: 0;
     }
 
@@ -60,8 +62,8 @@
   </nav>
   <div class="jumbotron img-fluid">
     <div class="container text-center">
-      <h1>What Time is it</h1>
-      <p style="color: #fff;">Helping you to navigate this busy world</p>
+      <h1>travChoice</h1>
+      <p style="color: #fff;">The right commute. Everytime.</p>
     </div>
   </div>
 
@@ -93,8 +95,8 @@
       </div>
 
       <div class="col-sm-4">
-        <div class="panel panel-info">
-          <div class="panel-heading">Walking Estimate</div>
+        <div class="panel panel-warning">
+          <div class="panel-heading" style="background: grey">Walking Estimate</div>
           <div class="panel-body" id="walkingEst">
             <!-- <h3>Walking Estimate</h3> -->
             <p>Duration: <span id="walkingDuration">Duration:</span></p>
@@ -109,22 +111,22 @@
     </div><br>
 
     <div class="col-sm-12">
-      <div class="panel panel-warning">
-        <div class="panel-heading" id="override">Destination Weather</div>
-        <div class="panel-body" id="weatherReturn">
+      <div class="panel panel-warning" style ="border-color: grey">
+        <div class="panel-heading"  style="background: grey" id="override">Destination Weather</div>
+        <div class="panel-body text-center" id="weatherReturn">
           <!-- <h3>Weather</h3> -->
           <p><span id="city">Address:</span></p>
           <p><span id="temp">Temperature:</span> </p>
           <p><span id="currWeather">Current Conditions:</span></p>
         </div>
       </div>
-    </div>
+    </div> 
   </div><br>
 
 
-    <footer class="container-fluid text-center img-fluid">
+    <!-- <footer class="container-fluid text-center img-fluid">
 
-    </footer>
+    </footer> -->
 
     <!-- Sidebar code  -->
 

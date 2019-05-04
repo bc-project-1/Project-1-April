@@ -24,7 +24,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 70%;
-    margin-bottom: 0;
+    margin-bottom: 50px;
   }
 
   span.b {
@@ -119,7 +119,7 @@ p.modalTop {
 }
 #weatherReturn p{
     display: inline;
-    padding-left: 80px;
+    /* padding-left: 80px; */
 }
 
 #uberEst, #transEst, #walkingEst{
@@ -131,6 +131,7 @@ p.modalTop {
     font-weight: bold;
     font-size: 15px;
 }
+
 
 
 
@@ -175,4 +176,7 @@ footer {
 }
 .navbar-inverse .navbar-nav>li>a {
     color: #fff;
+}
+.navbar{
+    margin-bottom: 0;
 }
