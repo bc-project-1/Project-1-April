@@ -134,8 +134,8 @@ function getWalking(key) {
             console.log(response);
             var walkingDuration = response.rows[0].elements[0].duration.text
             var walkingDistance = response.rows[0].elements[0].distance.text
-            $("#walkingDuration").append(" " + walkingDuration)
-            $("#walkingDistance").append(" " + walkingDistance)
+            $("#walkingDuration").empty().append(" " + walkingDuration)
+            $("#walkingDistance").empty().append(" " + walkingDistance)
 
         });
 }
