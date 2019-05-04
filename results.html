@@ -69,22 +69,22 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="panel panel-primary">
-          <div class="panel-heading">Uber</div>
-          <div class="panel-body" id="#">
+          <div class="panel-heading">Uber Estimate</div>
+          <div class="panel-body" id="uberEst">
             <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> -->
             <div class="form-group">
-              <h3>Estimate:</h3>
-              <p><span class="uber-time"></span></p>
-              <p class="uber-cost"></p>
+              <!-- <h3>Estimate:</h3> -->
+              <p>Duration: <span class="uber-time"></span></p>
+              <p>Cost: <span class="uber-cost"></span></p>
             </div>
           </div>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="panel panel-success">
-          <div class="panel-heading">Transit</div>
-          <div class="panel-body" id="#">
-            <h3>Transit Estimate</h3>
+          <div class="panel-heading">Transit Estimate</div>
+          <div class="panel-body" id="transEst">
+            <!-- <h3>Transit Estimate</h3> -->
             <p>Duration: <span id="transitDuration"></span></p>
             <p>Distance: <span id="transitDistance"></span></p>
           </div>
@@ -93,20 +93,35 @@
       </div>
 
       <div class="col-sm-4">
-        <div class="panel panel-warning">
-          <div class="panel-heading">Walking</div>
-          <div class="panel-body" id="#">
-            <h3>Walking Estimate</h3>
-            <p><span id="walkingDuration">Duration:</span></p>
-            <p><span id="walkingDistance">Distance:</span></p>
-            <h3>Weather</h3>
+        <div class="panel panel-info">
+          <div class="panel-heading">Walking Estimate</div>
+          <div class="panel-body" id="walkingEst">
+            <!-- <h3>Walking Estimate</h3> -->
+            <p>Duration: <span id="walkingDuration">Duration:</span></p>
+            <p>Distance: <span id="walkingDistance">Distance:</span></p>
+            <!-- <h3>Weather</h3>
             <p><span id="city">Dest. City:</span></p>
             <p><span id="temp">Temperature:</span> </p>
-            <p><span id="currWeather">Curr. Weather:</span></p>
+            <p><span id="currWeather">Curr. Weather:</span></p> -->
           </div>
         </div>
       </div>
     </div><br>
+
+    <div class="col-sm-12">
+      <div class="panel panel-warning">
+        <div class="panel-heading" id="override">Destination Weather</div>
+        <div class="panel-body" id="weatherReturn">
+          <!-- <h3>Weather</h3> -->
+          <p><span id="city">Address:</span></p>
+          <p><span id="temp">Temperature:</span> </p>
+          <p><span id="currWeather">Current Conditions:</span></p>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+
     <footer class="container-fluid text-center img-fluid">
 
     </footer>

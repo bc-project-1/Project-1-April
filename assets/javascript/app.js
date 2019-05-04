@@ -1,7 +1,7 @@
 //Uber Dom manipulation function
 function writeUber(response){
     $('.uber-time').text(response.prices[4].duration / 60 + ' minutes');
-    $('.uber-cost').text(response.prices[4].high_estimate + ' dollars');
+    $('.uber-cost').text(response.prices[4].estimate);
 }
 
 

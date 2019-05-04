@@ -84,7 +84,7 @@ function getWeather() {
             console.log("Dest. Temperature: " + temp)
             console.log("Dest. Weather: " + currWeather)
             console.log(response.name)
-            $("#city").append(" " + city)
+            // $("#city").append(" " + city)
             $("#temp").append(" " + temp)
             $("#currWeather").append(" " + currWeather)
             // weatherToDom()
@@ -134,8 +134,12 @@ function getWalking(key) {
             console.log(response);
             var walkingDuration = response.rows[0].elements[0].duration.text
             var walkingDistance = response.rows[0].elements[0].distance.text
+            var destAdd = response.destination_addresses
+            console.log(destAdd)
             $("#walkingDuration").empty().append(" " + walkingDuration)
             $("#walkingDistance").empty().append(" " + walkingDistance)
+            $("#city").append(" " + destAdd)
+
 
         });
 }
