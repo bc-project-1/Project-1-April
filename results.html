@@ -5,7 +5,9 @@
   <title>Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="assets/css/style.css">
@@ -71,8 +73,8 @@
           <div class="panel-body" id="#">
             <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> -->
             <div class="form-group">
-              <h3>Arrival</h3>
-              <p><span class="uber-time">Time:</span></p>
+              <h3>Estimate:</h3>
+              <p><span class="uber-time"></span></p>
               <p class="uber-cost"></p>
             </div>
           </div>
@@ -83,8 +85,8 @@
           <div class="panel-heading">Transit</div>
           <div class="panel-body" id="#">
             <h3>Transit Estimate</h3>
-            <p><span id="transitDuration">Duration:</span></p>
-            <p><span id="transitDistance">Distance:</span></p>
+            <p>Duration: <span id="transitDuration"></span></p>
+            <p>Distance: <span id="transitDistance"></span></p>
           </div>
 
         </div>
@@ -175,6 +177,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
     <script type="text/javascript" src="assets/javascript/api.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+   
 
 
     <script>
@@ -194,11 +197,7 @@
 
 
       firebase.database().ref().once('value').then(function (snapshot) {
-        //console.log(snapshot);
         gKey = snapshot.node_.children_.root_.value.value_;
-        console.log(gKey);
-
-
         console.log(sessionStorage.getItem("sLat"));
         console.log(sessionStorage.getItem("sLong"));
         console.log(sessionStorage.getItem("eLat"));
@@ -208,10 +207,6 @@
         getTransit(gKey);
         getWalking(gKey);
       });
-
-    //get Uber, weather, transit, and walking info on page load
-
-
 
     </script>
 </body>
