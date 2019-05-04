@@ -117,6 +117,23 @@ p.modalTop {
     /* If you want a transition effect */
     padding: 20px;
 }
+#weatherReturn p{
+    display: inline;
+    padding-left: 80px;
+}
+
+#uberEst, #transEst, #walkingEst{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#weatherReturn{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 @media screen and (max-height: 450px) {
